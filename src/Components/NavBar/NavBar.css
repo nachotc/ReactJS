@@ -1,0 +1,19 @@
+.navbar_style{
+    display: flex;
+    background: rgba(41, 41, 41, 0.6);
+    justify-content: space-between;   
+    padding: 5px;
+}
+
+.navbar_list_style{
+  list-style: none;
+  display: flex;
+}
+
+.navbar_list_style li a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px 0px 5px 0px;
+    padding: 10px;
+    color: white;
+  }

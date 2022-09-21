@@ -1,10 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './Components/NavBar/NavBar'
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
+import React from 'react';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+     {/*  {React.createElement(NavBar,{logo: 'Adidas'})} */}
+      <NavBar logo='CafeR'/>
+      <ItemListContainer name='Jose Ignacio'/>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +23,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
