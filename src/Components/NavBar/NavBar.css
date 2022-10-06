@@ -10,7 +10,7 @@
   display: flex;
 }
 
-.navbar_list_style li a {
+.navbar_list_style li{
     text-decoration: none;
     display: inline-block;
     margin: 5px 0px 5px 0px;
