@@ -2,23 +2,33 @@ import { useState, useEffect } from 'react'
 import { getProducts } from '../../AsyncMock'
 import Item from '../Item/Item'
 import { useParams } from 'react-router-dom'
-import userEvent from '@testing-library/user-event'
-//import { getProductsByCategory } from '../../asyncMock'
+import { getProductByCategory } from '../../AsyncMock'
 
 const ItemListContainer = (props) => {
 
     const [products, setProducts] = useState([])
 
+    const { category } = useParams()
+
     useEffect(() => {
-        getProducts().then(response => {
-            setProducts(response)
-        })
-    }, []
+
+        if(category === undefined){
+            getProducts().then(response => {
+                setProducts(response)
+            })
+        }
+        else{
+            getProductByCategory(category).then(response => {
+                setProducts(response)
+            })
+        }
+       
+      
+    }, [category]
     )
 
     return (
     <div>
-        <div>Hola, {props.name}! Acá iran tus productos</div>
         <Item products={products}/>
     </div>
     )
